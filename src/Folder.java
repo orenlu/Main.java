@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Folder extends StorageItem{
-    private ArrayList<StorageItem> Items;
+    public ArrayList<StorageItem> Items;
 
     /**constructor**/
     public Folder(String name){

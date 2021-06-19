@@ -24,6 +24,7 @@ public class File extends StorageItem {
     public int getSize(){
         return this.content.length();
     }
+    public Date getDate(){return this.getCreateDate();}
     /**adding required content to the existing content of the file**/
     public void addContent(String contentToAdd){
         this.content= this.content + contentToAdd;
