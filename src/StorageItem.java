@@ -27,10 +27,10 @@ public class StorageItem{
     public Date randomDate() {
         long rndDate = Main.rnd.nextLong();
         int startYear = 2017;                                    //Starting year of specified random date
-        int endYear = 2022;                                    //Starting year of specified random date (including)
+        int endYear = 2021;                                    //Starting year of specified random date (including)
         long start = Timestamp.valueOf(startYear + 1 + "-1-1 0:0:0").getTime();
-        long end = Timestamp.valueOf(endYear + "-1-1 0:0:0").getTime();
-        long ms = (long)(start+(rndDate)%(end-start));    //The qualified number of 13-bit milliseconds is obtained.
+        long end = Timestamp.valueOf(endYear + "-12-31 23:59:59").getTime();
+        long ms = (long)(start+(Math.abs(rndDate))%(end-start));    //The qualified number of 13-bit milliseconds is obtained.
         Date createDate = new Date(ms);
         return createDate;
     }
