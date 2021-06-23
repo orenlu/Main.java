@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.*;
 import java.util.Comparator;
 
-abstract public class StorageItem {
+ public class StorageItem {
     private String name;
     private final Date createDate;
     private int Size;
