@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.*;
 import java.util.Comparator;
 
-public class StorageItem {
+abstract public class StorageItem {
     private String name;
     private final Date createDate;
     private int Size;
@@ -38,7 +38,7 @@ public class StorageItem {
         Date createDate = new Date(ms);
         return createDate;
     }
-    public void printTree(SortingField field) {
+      public void printTree(SortingField field) {
     }
 
 }
