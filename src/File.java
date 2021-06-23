@@ -30,7 +30,7 @@ public class File extends StorageItem {
         this.content= this.content + contentToAdd;
     }
     public void printContent(){
-        System.out.println(this.getName() + " Size: " + this.getSize() + "MB Created: " + this.getCreateDate() +"\n");
+        System.out.println(this.getName() + "Size: " + this.getSize() + "Created: " + this.getCreateDate() +"\n");
         System.out.println(this.content);
     }
 
