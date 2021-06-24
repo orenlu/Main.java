@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class File extends StorageItem {
 
     private String suffix;
@@ -12,25 +10,21 @@ public class File extends StorageItem {
         content="";
     }
     /**return the full name of the file with the suffix**/
-    public String getName(){
-        StringBuilder fileName=new StringBuilder();
-        fileName.append(this.get_Name());
-        fileName.append('.');
-        fileName.append(this.suffix);
-        String fullname= fileName.toString();
-        return fullname;
+    @Override
+    public String getName() {
+        return name + "." + suffix;
     }
     /** return the size of the file**/
     public int getSize(){
         return this.content.length();
     }
-    public Date getDate(){return this.getCreateDate();}
+    public String getDate(){return this.getCreateDate();}
     /**adding required content to the existing content of the file**/
     public void addContent(String contentToAdd){
         this.content= this.content + contentToAdd;
     }
     public void printContent(){
-        System.out.println(this.getName() + "Size: " + this.getSize() + "Created: " + this.getCreateDate() +"\n");
+        System.out.print(this.getName() + " Size: " + this.getSize() + "MB " + "Created: " + this.getCreateDate() +"\n");
         System.out.println(this.content);
     }
 
